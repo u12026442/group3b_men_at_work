@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt, oneside]{article}
+\documentclass[a4paper, 10pt, oneside]{article}
 
 \title{COS301: Application and Functional Requirements}
 \date{2015-02-19}
@@ -72,54 +72,68 @@ and the typical usage scenarios for the outputs of the project."}
 	\item Administrator: Want to have full CRUD access to administer and maintain the system.
 }
 
-%Preconditions: What must be true on start and worth telling the reader?
-\addfield{Preconditions:}{}
-%when multiple
-%\additemizedfield{Preconditions:}{} 
+\addfield{Preconditions:}{User is identified and authenticated.}
 
-%Postconditions: What must be true on successful completion and worth telling the reader
-\addfield{Postconditions:}{}
-%when multiple
-%\additemizedfield{Preconditions:}{}
+%\additemizedfield{Preconditions:}{
+%	\item User is authenticated with ldap
+%	\item User is in ldap group where they can have %access to the Buzz system
+%} 
+ 
+\additemizedfield{Preconditions:}{
 
-%Main Success Scenario: A typical, unconditional happy path scenario of success.
-\addscenario{Main Success Scenario:}{
-	\item The first action
-	\item The second action
+	\item User created group/space/thread/reply
+	\item Group/space/thread/reply saved in database
+	\item XP added to user profile
+	\item Log entry made
+
 }
 
-%Extensions: Alternate scenarios of success or failure.
+
+\addscenario{Main Success Scenario:}{
+	\item User login with LDAP credentials
+	\item User transverse to the Group/Space/Thread section
+	\item User add Group/Space/Thread or post a reply on a thread
+	\item Group/space/thread/reply saved in database 
+	\item All necessary users are alerted according to action(s) took by user
+	\item User received XP related to their action in previous steps
+	\item If user qualify for a "level up" or badge, user is alerted and access rights are updated accordingly. 
+}
+
 \addscenario{Extensions:}{
-	\item[2.a] Invalid login data:
+	\item[1.a] Invalid login data:
 		\begin{enumerate}
 		\item[1.] System shows failure message
 		\item[2.] User returns to step 1
 		\end{enumerate}
-	\item[5.a] Invalid subsriber data:
+	\item[2.a] Invalid access rights:
 		\begin{enumerate}
 		\item[1.] System shows failure message
 		\item[2.] User returns to step 2 and corrects the errors
 		\end{enumerate}
+	\item[2.a] Invalid create/update rights:
+		\begin{enumerate}
+		\item[1.] System shows failure message
+		\item[2.] User returns to step 3 and corrects the errors
+		\end{enumerate}
 }
 
-%Special Requirements: Related non-functional requirements.
 \additemizedfield{Special Requirements:}{
-	\item first applicable non-functional requirement
-	\item second applicable non-functional requirement
+	\item Easy to use
+	\item Users login from LDAP
+	\item Game-like awards/level-up
+	\item Log all actions on system
+	\item Everything must be configurable 
 }
 
-%Technology and Data Variations List: Varying I/O methods and data formats.
-\addscenario{Technology and Data Variations List:}{
-	\item[1a.] Alternative first action with other technology
-}
+%\addscenario{Technology and Data Variations List:}{
+%	\item[1a.] Alternative first action with other %technology
+%}
 
-%Frequency of Occurrence: Influences investigation, testing and timing of implementation.
-\addfield{Frequency of Occurrence:}{}
+%\addfield{Frequency of Occurrence:}{}
 
-%Miscellaneous: Such as open issues/questions
 %\addfield{Open Issues:}{}
 
-\end{usecase}
+\end{usecase} 
 
 
 \subsection{Required functionality}
