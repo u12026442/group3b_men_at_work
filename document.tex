@@ -14,7 +14,7 @@
 
 \newpage
 \pagenumbering{roman}
-\tableofcontents
+\tableofcontents 
 
 \newpage
 \pagenumbering{arabic}
@@ -136,23 +136,28 @@ and the typical usage scenarios for the outputs of the project."}
 \end{usecase} 
 
 \newpage
+
 \begin{usecase}
 
 \addtitle{Use Case 2}{Buzz Discussion Board} 
 
-\addfield{Scope:}{Groups (Buzz Discussion Board)}
+\addfield{Scope:}{Login (Buzz Discussion Board)}
 
 \addfield{Level:}{User-goal}
 
 \addfield{Primary Actor:}{End-User}
 
 \additemizedfield{Stakeholders and Interests:}{
-	\item 
+	\item asdf
 }
 
-\addfield{Preconditions:}{}
+\addfield{Preconditions:}{User is in LDAP and Authentication succeeds}
 
-\additemizedfield{Preconditions:}{}
+\additemizedfield{Preconditions:}{
+	\item User session is created
+	\item User is logged in
+	\item Log entry created
+}
 %	\item User is authenticated with ldap
 %	\item User is in ldap group where they can have %access to the Buzz system
 %} 
@@ -162,11 +167,11 @@ and the typical usage scenarios for the outputs of the project."}
 %	\item 
 
 
-}%
+%}
 
 
 \addscenario{Main Success Scenario:}{
-	\item 
+	\item asdf
 	
 }
 
@@ -189,7 +194,7 @@ and the typical usage scenarios for the outputs of the project."}
 }
 
 \additemizedfield{Special Requirements:}{
-	\item 
+	\item asdf
 	
 }
 
@@ -202,6 +207,77 @@ and the typical usage scenarios for the outputs of the project."}
 %\addfield{Open Issues:}{}
 
 \end{usecase} 
+
+\newpage
+\begin{usecase}
+
+\addtitle{Use Case 2}{Buzz Discussion Board} 
+
+\addfield{Scope:}{Groups (Buzz Discussion Board)}
+
+\addfield{Level:}{User-goal}
+
+\addfield{Primary Actor:}{End-User}
+
+\additemizedfield{Stakeholders and Interests:}{
+	\item asdf
+}
+
+\addfield{Preconditions:}{}
+
+\additemizedfield{Preconditions:}{
+	\item asdf
+}
+%	\item User is authenticated with ldap
+%	\item User is in ldap group where they can have %access to the Buzz system
+%} 
+ 
+%\additemizedfield{Preconditions:}{
+
+%	\item 
+
+
+%}
+
+
+\addscenario{Main Success Scenario:}{
+	\item asdf
+	
+}
+
+\addscenario{Extensions:}{
+	\item[1.a] Invalid login data:
+		\begin{enumerate}
+		\item[1.] System shows failure message
+		\item[2.] User returns to step 1
+		\end{enumerate}
+	\item[2.a] Invalid access rights:
+		\begin{enumerate}
+		\item[1.] System shows failure message
+		\item[2.] User returns to step 2 and corrects the errors
+		\end{enumerate}
+	\item[2.a] Invalid create/update rights:
+		\begin{enumerate}
+		\item[1.] System shows failure message
+		\item[2.] User returns to step 3 and corrects the errors
+		\end{enumerate}
+}
+
+\additemizedfield{Special Requirements:}{
+	\item asdf
+	
+}
+
+%\addscenario{Technology and Data Variations List:}{
+%	\item[1a.] Alternative first action with other %technology
+%}
+
+%\addfield{Frequency of Occurrence:}{}
+
+%\addfield{Open Issues:}{}
+
+\end{usecase} 
+
 \newpage
 \subsection{Required functionality}
 \subsection{Process specifications}
