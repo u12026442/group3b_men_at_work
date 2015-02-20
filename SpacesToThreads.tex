@@ -1,0 +1,30 @@
+\documentclass{report}
+\usepackage{booktabs}
+\begin{document}
+	
+	\underline{\textbf{\LARGE Spaces To Threads}}
+	\begin{table}[h]
+		\begin{tabular}{@{}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|@{}}
+			\toprule
+			\textbf{Usecase} & \textbf{Description} & \textbf{Pre-Conditions} & \textbf{Post-Conditions} \\ \midrule
+			
+			createSpace& Create a new space (module)& A group must exist & Space created or an exception is thrown \\ \midrule
+			deleteSpace& Remove a space from Buzz& The space exists that wants to be removed and the user has permission& Space removed or exception is thrown \\ \midrule
+			editSpace& Allow users with permission to modify the space& The Space exists. Adequate permissions& State of space changed or exception is thrown \\ \midrule
+			searchSpaces& Search the spaces in Buzz& Must be a registered user& Search list created or exception is thrown \\ \midrule
+			&             &                &                 \\ \midrule
+			createThread& Create a thread within a specific space& The space must exist and the user must have permission& Thread created or exception is thrown \\ \midrule
+			deleteThread& Remove a thread from within a specific space& The thread must exist and the user must have permission& Thread removed or exception is thrown \\ \midrule
+			renameThread& Rename the thread& The thread must exist and the user must have permission & Thread renamed or throws exception \\ \midrule
+			voteThread& Up or down vote a thread& Be registered with the space& Vote count changed or exception is thrown \\ \midrule
+			viewUnread& View unread threads& Thread has not yet been seen by the user& List created of unseen threads \\ \midrule
+			filterThreads& Filter threads according to the author, date created and social tags& Threads must exist& Filter list created \\ \midrule
+			searchThreads& Search the threads& Must be registered user for the current space& Search list created or exception is throws \\ \midrule
+			showPopular& Show poplar threads according to the amount of up votes& Threads must be above a specific vote count&  Popular list created \\ \midrule
+			addSocialTag& Add a social tag to the thread& Author of the thread& Tag created or throw an exception \\ \midrule
+			updateThread& Thread author can update their thread& Must be the author& Thread changed \\ \bottomrule
+		                 
+		\end{tabular}
+	\end{table}
+
+\end{document}
