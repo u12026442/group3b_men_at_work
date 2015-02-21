@@ -1,0 +1,78 @@
+\documentclass{report}
+\usepackage{booktabs}
+\begin{document}
+	
+	\underline{\textbf{\LARGE Spaces To Threads}}
+
+	\begin{table}[h]
+		\begin{tabular}{@{}|p{2cm}|p{3cm}|p{4cm}|p{4cm}|@{}}
+			\toprule
+			Usecase & 
+			Description & 
+			Pre-Conditions & 
+			Post-Conditions \\ \midrule
+			
+			User List & 
+			Creating User List &
+			- User creating the list is logged in and has the permissions for to create a user list. \newline
+			- A group has been created to accept the user list. & - New user list is created in a group.\\ \midrule
+			
+			User List & 
+			Update user list & 
+			- User updating the list is logged in and has the permission to update a user list. \newline 
+			- User list exists for the user to update. & 
+			Changes to the user list are saved \\ \midrule
+			
+			User list 
+			& Set user permission 
+			& - User setting permissions is logged in and has permission to do so. \newline 
+			- User being updated is on the user list. - Permission being set is valid and allowed. 
+			& - The user being updates gains access to the functionality assigned to that user permission level. \newline 
+			- The new XP is assigned to the user is saved to the database. \newline - User is notified that their XP has changed. \\ \midrule
+			
+			User List 
+			& Add user to user list 
+			& - User performing this action is logged in and has the required permission. \newline 
+			- The user bening added is a registered user.  
+			& - User is added to the user list. \newline 
+			- The users XP is added to the database. \newline 
+			- User can see and access the groups spaces on their profile. \\ \midrule
+		\end{tabular}
+	\end{table}			
+			
+	\begin{table}[h]
+		\begin{tabular}{@{}|p{2cm}|p{3cm}|p{4cm}|p{4cm}|@{}}
+			\toprule
+			Usecase & 
+			Description & 
+			Pre-Conditions & 
+			Post-Conditions \\ \midrule			
+			
+			
+			User List 
+			& Recieve unread posts 
+			& - User requesting un read post is logged in and is a part of the user list. \newline 
+			- There are posts that the user has not read. 
+			& - The unread posts are marked differently to read posts on the users profile. \\ \midrule
+			
+			User List 
+			& Recieve user XP, Permission level. 
+			& - User is logged in and a member of this user list. 
+			& - User sees the functionallity assigned to that permission level. \\ \midrule
+			
+			User list 
+			& Remove user from list. 
+			& - User performing the remove has permission to remove users from the user list. \newline 
+			- User being remove is a user on the user list. 
+			& - User being removed is no longer part of the user list. \\ \midrule
+			
+			User List 
+			& Delete the whole list. 
+			& - User performing the delete has the permission to delete the list. \newline 
+			- The list exists to delete. 
+			& - User list is removed from the group. \newline 
+			- All the users that where on the list are notified.  \\ \bottomrule
+		\end{tabular}
+	\end{table}
+
+\end{document}
