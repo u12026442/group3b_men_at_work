@@ -1,30 +1,43 @@
 \documentclass{report}
 \usepackage{booktabs}
+\usepackage{longtable}
 \begin{document}
 	
 	\underline{\textbf{\LARGE Spaces To Threads}}
-	\begin{table}[h]
-		\begin{tabular}{@{}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|@{}}
+		\begin{longtable}{@{}|p{2.5cm}|p{3cm}|p{4cm}|p{4cm}|@{}}
 			\toprule
 			\textbf{Usecase} & \textbf{Description} & \textbf{Pre-Conditions} & \textbf{Post-Conditions} \\ \midrule
 			
-			createSpace& Create a new space (module)& A group must exist & Space created or an exception is thrown \\ \midrule
-			deleteSpace& Remove a space from Buzz& The space exists that wants to be removed and the user has permission& Space removed or exception is thrown \\ \midrule
-			editSpace& Allow users with permission to modify the space& The Space exists. Adequate permissions& State of space changed or exception is thrown \\ \midrule
-			searchSpaces& Search the spaces in Buzz& Must be a registered user& Search list created or exception is thrown \\ \midrule
+			createSpace& Create a new space (discussion space within group)& \begin{itemize} \item A group must exist \end{itemize}& \begin{itemize} \item Space created  \item Or an exception is thrown \end{itemize} \\ \midrule
+			
+			deleteSpace& Remove a space from groups& \begin{itemize} \item The space exists that wants to be removed \item The user has permission \end{itemize}& \begin{itemize} \item Space removed \item Or an exception is thrown \end{itemize} \\ \midrule
+			
+			editSpace& Allow users with permission to modify the space& \begin{itemize} \item The Space exists \item The user has permission \end{itemize}& \begin{itemize} \item State of space changed \item Or an exception is thrown \end{itemize} \\ \midrule
+			
+			searchSpaces& Search the spaces in groups& \begin{itemize} \item Must be a registered user \end{itemize}& \begin{itemize} \item Search list created \item Or an exception is thrown \end{itemize} \\ \midrule
+			
 			&             &                &                 \\ \midrule
-			createThread& Create a thread within a specific space& The space must exist and the user must have permission& Thread created or exception is thrown \\ \midrule
-			deleteThread& Remove a thread from within a specific space& The thread must exist and the user must have permission& Thread removed or exception is thrown \\ \midrule
-			renameThread& Rename the thread& The thread must exist and the user must have permission & Thread renamed or throws exception \\ \midrule
-			voteThread& Up or down vote a thread& Be registered with the space& Vote count changed or exception is thrown \\ \midrule
-			viewUnread& View unread threads& Thread has not yet been seen by the user& List created of unseen threads \\ \midrule
-			filterThreads& Filter threads according to the author, date created and social tags& Threads must exist& Filter list created \\ \midrule
-			searchThreads& Search the threads& Must be registered user for the current space& Search list created or exception is throws \\ \midrule
-			showPopular& Show poplar threads according to the amount of up votes& Threads must be above a specific vote count&  Popular list created \\ \midrule
-			addSocialTag& Add a social tag to the thread& Author of the thread& Tag created or throw an exception \\ \midrule
-			updateThread& Thread author can update their thread& Must be the author& Thread changed \\ \bottomrule
+			
+			createThread& Create a thread within a specific space& \begin{itemize} \item The space must exist \item The user must have permission \end{itemize}& \begin{itemize} \item Thread created \item Or an exception is thrown \end{itemize} \\ \midrule
+			
+			deleteThread& Remove a thread from within a specific space& \begin{itemize} \item The thread must exist \item The user must have permission \end{itemize}& \begin{itemize} \item Thread removed \item Or an exception is thrown \end{itemize} \\ \midrule
+			
+			renameThread& Rename the thread& \begin{itemize} \item The thread must exist \item The user must have permission \end{itemize}& \begin{itemize} \item Thread renamed \item Or an exception is thrown \end{itemize} \\ \midrule
+			
+			voteThread& Up or down vote a thread& \begin{itemize} \item Be registered with the space \end{itemize}& \begin{itemize} \item Vote count changed \item Or an exception is thrown \end{itemize} \\ \midrule
+			
+			viewUnread& View unread threads& \begin{itemize} \item Thread has not yet been seen by the user \end{itemize}& \begin{itemize} \item List created of unseen threads \end{itemize} \\ \midrule
+			
+			filterThreads& Filter threads according to the author, date created and social tags& \begin{itemize} \item Threads must exist \end{itemize}& \begin{itemize} \item Filter list created \end{itemize} \\ \midrule
+			
+			searchThreads& Search the threads& \begin{itemize} \item Must be registered user for the current space \end{itemize}& \begin{itemize} \item Search list created \item Or an exception is thrown \end{itemize} \\ \midrule
+			
+			showPopular& Show poplar threads according to the amount of up votes& \begin{itemize} \item Threads must be above a specific vote count \end{itemize}& \begin{itemize} \item Popular list created \end{itemize} \\ \midrule
+			
+			addSocialTag& Add a social tag to the thread& \begin{itemize} \item Author of the thread \end{itemize}& \begin{itemize} \item Tag created \item Or an exception is thrown \end{itemize} \\ \midrule
+			
+			updateThread& Thread author can update their thread& \begin{itemize} \item Must be the author \end{itemize}& \begin{itemize} \item Thread changed \item Or an exception is thrown \end{itemize} \\ \bottomrule
 		                 
-		\end{tabular}
-	\end{table}
+		\end{longtable}
 
 \end{document}
