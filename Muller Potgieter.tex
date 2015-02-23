@@ -1,0 +1,28 @@
+\documentclass[a4paper]{article}
+\begin{document}
+\begin{table}
+\begin{tabular}{p{3cm}p{3cm}p{3cm}p{3cm}p{3cm}}
+\hline
+Actor & Use-Case & 
+Description & Pre-condition & Post-condition \\ \hline
+
+Administrator,\\Lecturer,User & View profile & View profile details. & User must be logged in and the profile must exist & Details relating to the profile are visible to the user\\ \hline
+
+Administrator & Alter profile image & Alters the profile's image. & The user must have administrator rights and the profile must exist. & Image is changed.\\ \hline
+
+Administrator & Alter profile name & Alters the profile's name. & The user must have administrator rights and the profile must exist. & Name is changed.\\ \hline
+
+Administrator & View profile's relation to groups & View profile's relation to groups. & The user must have administrator rights and the profile must exist. & Relation to group visible.\\ \hline
+
+Administrator & View profile's relation to groups & View profile's relation to groups. & The user must have administrator rights and the profile must exist. & Relation to group visible.\\ \hline
+
+Administrator,\\Lecturer,User & View Experience Table log. & View a list of changes to the user's experience & Profile exists and the user must have had their experience altered at some point. & Log of changes in experience visible.\\ \hline
+
+Administrator,\\Lecturer,User & View User's level. & View the user's current level & Profile exists. & User's level becomes visible.\\ \hline
+
+Administrator,\\Lecturer,User & View privileges. & View the user's current privileges & Profile exists and the user is at a level that grants privileges. & User's privileges become visible.\\ \hline
+
+
+\end{tabular}
+\end{table}
+\end{document}
