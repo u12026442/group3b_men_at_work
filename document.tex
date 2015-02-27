@@ -1,5 +1,7 @@
-\documentclass[a4paper, 10pt, oneside]{report}
-\usepackage{graphicx}
+\documentclass[pdftex,10pt,a4paper]{report}
+
+\usepackage[pdftex]{graphicx}
+
 \graphicspath{ {images/} }
 
 
@@ -10,15 +12,15 @@
 \usepackage{longtable}
 \setcounter{secnumdepth}{3}
 
-
-\title{COS301: Application and Functional Requirements}
-\date{2015-02-27}
-\author{Group 3B}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 
 \begin{document}
 
-\maketitle
+\include{title}
+
+\newpage
+
 \pagenumbering{gobble}
 
 \newpage
@@ -45,22 +47,43 @@ The user interface.
 \\
 For the user interface we plan to make use of web application as well as a mobile application that will access that buzz system. The user will be presented with a login screen on start-up of the application. After successfully logging in the user will enter their profile. They will then receive all the groups that they are a part of and all the posts that they have not looked at will be marked. They will then be able to access the spaces, threads and replies for the groups that they are a part of as well as contribute to the groups according to their permission level.
 
+	\begin{description}
+		\item[Use case diagram for the Buzz system] 
+	\end{description}
+	\includegraphics[width=\textwidth]{Buzz}
+
 \chapter{Background}
 
-\textit "A general discussion of what lead to the project including potentially:"
 
-\begin{itemize}
-\item \textit business/research opportunities,
-\item \textit opportunities to simplify/improve some aspect of life/work or community,
-\item \textit problems your client is currently facing,
-\item \textit ...
-\end{itemize}
+The currents systems in place for discussion are not adequate for creative and constructive activities for learning and development, the Buzz system aims to fix this. Current systems do not encourage users to participate on the active discussions and users that are interested in following a discussion are not notified of changes to the thread. This means that users will have to go and check if there are any updates.  This could mean that users with valuable input are not aware that the input is required, and lecturers may not reply to users that ask questions. We aim to make a single system that addresses all these problems.
 
 \chapter{ Functional requirements and application design}
 	\section{Use case prioritization}
 		\subsection{Critical}
+		
+\begin{itemize}
+\item	BuzzSpace creation
+\item	Group
+\item	Spaces
+\item	Threads 
+\item	Replies
+\end{itemize} 
+
 		\subsection{Important}
+\begin{itemize}
+\item		Authenticate
+\item	Log in
+\item	Logs
+\item	Reports
+\item	User interface
+\end{itemize} 
+		
+		
 		\subsection{Nice to have}
+\begin{itemize}
+\item	XP
+\end{itemize} 
+		
 	\section{Use case/Services contracts}
 
 \newpage
@@ -78,8 +101,8 @@ For the user interface we plan to make use of web application as well as a mobil
 \newpage
 \include{userinterface}
 \newpage
-%\include{authenticate}
-%\newpage
+\include{authenticate}
+\newpage
 \include{audit}
 \newpage
 \include{report}
@@ -87,12 +110,34 @@ For the user interface we plan to make use of web application as well as a mobil
 \include{XP}
 \newpage
 
-\section{Required functionality}
-\section{Process specifications}
 \section{Domain Model}
-\section{Open Issues}
+	\begin{description}
+		\item[Domain Model for Buzz.] 
+	\end{description}
+	\includegraphics[width=\textwidth]{domainModel}
 
-
-
+\newpage
+\section{Activity Diagrams}
+\newpage
+	\begin{description}
+		\item[Activity diagram for CreateGroup] 
+	\end{description}
+	\includegraphics[width=\textwidth]{CreateGroup}
+	\newpage
+	\begin{description}
+		\item[Activity diagram for CreateThread.] 
+	\end{description}
+	\includegraphics[width=\textwidth]{CreateThread}
+		\begin{description}
+		\item[Activity diagram for Login.] 
+	\end{description}
+	\includegraphics[width=\textwidth]{Login}
+	\newpage
+		\begin{description}
+		\item[Activity diagram for UpdateXP.] 
+	\end{description}
+	\includegraphics[width=\textwidth]{UpdateXP}
+	
+	
 \end{document}
 
