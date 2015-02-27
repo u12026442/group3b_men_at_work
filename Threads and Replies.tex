@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage[textwidth = 195mm]{geometry}
+\usepackage{tabularx}
+
+\begin{document}
+
+\begin{table}
+\begin{tabularx}{\textwidth}{|>{\setlength\hsize{0.5\hsize}\setlength\linewidth{\hsize}}X|>{\setlength\hsize{.8\hsize}\setlength\linewidth{\hsize}}X|>{\setlength\hsize{.9\hsize}\setlength\linewidth{\hsize}}X|>{\setlength\hsize{0.8\hsize}\setlength\linewidth{\hsize}}X|}
+\hline
+	\multicolumn{4}{|c|}{\textbf{Use cases for: Threads and Replies}}\\
+\hline
+	\paragraph{Use Case} & \paragraph{Precondition} & \paragraph{Post-condition} & \paragraph{Description} \\
+\hline
+	\paragraph{Thread Creator}
+&
+\begin{itemize}
+	\item Creator must be authenticated and  logged in
+	\item Creator must have the necessary privileges to create a topic in the current space
+	\item Creator must belong to a group
+	
+	
+\end{itemize} &
+\begin{itemize}
+\item	Thread contains a subject or title
+\item	Thread contains a clear short description 
+\item	Thread shows the author
+\item	Thread shows status(Published /Unpublished)
+\item	Thread contains descriptive tags
+\item	Thread shows total replies (if any available)
+\item	Thread belongs to a category
+\item	Thread has a valid date
+\item	Thread allows for users to rate it
+\item Thread is saved to database
+
+\end{itemize} &
+	\paragraph{Responsible for creating, editing,and deleting a thread}
+\\
+\hline
+	\paragraph{Reply Creator}
+	&
+	\begin{itemize}
+\item	User  must be authenticated and  logged in
+\item	User must belong to a group
+\item	User must be able to participate in threads within current space
+\item	A thread must exist
+	
+		
+		
+	\end{itemize} &
+	\begin{itemize}
+\item Reply post is linked to the right thread
+\item Reply is in correct format
+\item Reply is in correct format
+\item Reply is saved to database
+
+	\end{itemize} &
+	\paragraph{Responsible for Creating , editing ,and deleting a thread}
+	\\
+	\hline
+\end{tabularx}
+\end{table}
+
+
+
+\end{document}
