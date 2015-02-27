@@ -1,0 +1,40 @@
+\documentclass{report}
+\usepackage{booktabs}
+\usepackage{longtable}
+\begin{document}
+	
+		\begin{longtable}{@{}|p{1.5cm}|p{2.2cm}|p{3cm}|p{3.5cm}|p{3.5cm}|@{}}
+			\toprule
+			\multicolumn{5}{|c|}{\textbf{Use cases for Log}}\\
+			\hline
+			\textbf{Actor} & \textbf{Use Case} & \textbf{Pre-condition} & \textbf{Post-Conditions} & \textbf{Description} \\ \midrule
+			
+			User Or Admin& 
+			Create log& 
+			\begin{itemize}
+				\item Buzz must exist
+				\item The actor must be logged in
+				\item The actor has the required amount of XP
+			\end{itemize}& 
+			\begin{itemize}
+				\item A Log for the buzz system is created
+				\item The log is linked to the whole Buzz system
+			\end{itemize} & 
+			Create a log in order to monitor the changes that happen in buzz \\ \midrule
+			
+			User Or Admin& 
+			 View a log& 
+			\begin{itemize}
+				\item Buzz must exist
+				\item The actor must be logged in
+				\item The actor has the required amount of XP
+				\item A log must exist
+			\end{itemize}& 
+			\begin{itemize}
+				\item Actor has viewed and read the log
+			\end{itemize} & 
+			User views the log in order to monitor changes that happened within buzz \\ \midrule
+			
+		\end{longtable}
+
+\end{document}
