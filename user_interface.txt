@@ -1,0 +1,3 @@
+The user interface.
+
+For the user interface we plan to make use of web application as well as a mobile application that will access that buzz system. The user will be presented with a login screen on start-up of the application. After successfully logging in the user will enter their profile. They will then receive all the groups that they are a part of and all the posts that they have not looked at will be marked. They will then be able to access the spaces, threads and replies for the groups that they are a part of as well as contribute to the groups according to their permission level. 
