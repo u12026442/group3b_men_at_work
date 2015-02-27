@@ -1,4 +1,4 @@
-\documentclass[a4paper, 10pt, oneside]{article}
+\documentclass[a4paper, 10pt, oneside]{report}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 
@@ -6,6 +6,7 @@
 \usepackage[textwidth = 200mm,margin = 15mm]{geometry}
 
 \usepackage{tabularx}
+\setcounter{secnumdepth}{5}
 
 
 \title{COS301: Application and Functional Requirements}
@@ -26,16 +27,16 @@
 \pagenumbering{arabic}
 
 
-\section{Introduction}
+\chapter{Introduction}
 
 This document contains the architecture and functional requirements for the Buzz Discussion Board system. It will start with a brief  vision and background to explain the need for such a system from where the architecture and functional requirements will follow.
 
-\section{Vision}
+\chapter{Vision}
 
 \textit{"A short discussion of the project vision, i.e. what the client is trying to achieve with the project
 and the typical usage scenarios for the outputs of the project."}
 
-\section{Background}
+\chapter{Background}
 
 \textit "A general discussion of what lead to the project including potentially:"
 
@@ -46,25 +47,34 @@ and the typical usage scenarios for the outputs of the project."}
 \item \textit ...
 \end{itemize}
 
-\section{Architecture requirements}
+\chapter{Architecture requirements}
 
-	\subsection{Access channel requirements}
-	\subsection{Quality requirements}
-	\subsection{Integration requirements}
-	\subsection{Architecture constraints}
+	\section{Access channel requirements}
+	\section{Quality requirements}
+	\section{Integration requirements}
+	\section{Architecture constraints}
 
-\section{ Functional requirements and application design}
-	\subsection{Use case prioritization}
-		\subsubsection{Critical}
-		\subsubsection{Important}
-		\subsubsection{Nice to have}
-	\subsection{Use case/Services contracts}
+\chapter{ Functional requirements and application design}
+	\section{Use case prioritization}
+		\subsection{Critical}
+		\subsection{Important}
+		\subsection{Nice to have}
+	\section{Use case/Services contracts}
 
 \newpage
-
 \include{groups}
-
 \newpage
+\include{groups}
+\newpage
+\include{groups}
+\newpage
+\include{groups}
+\newpage
+\include{groups}
+\newpage
+\include{groups}
+\newpage
+
 \subsection{Required functionality}
 \subsection{Process specifications}
 \subsection{Domain Model}
