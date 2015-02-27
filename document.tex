@@ -4,13 +4,15 @@
 
 
 \usepackage[textwidth = 200mm,margin = 15mm]{geometry}
-
+\usepackage{hyperref}
 \usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{longtable}
 \setcounter{secnumdepth}{3}
 
 
 \title{COS301: Application and Functional Requirements}
-\date{2015-02-19}
+\date{2015-02-27}
 \author{Group 3B}
 
 
@@ -21,6 +23,7 @@
 
 \newpage
 \pagenumbering{roman}
+
 \tableofcontents 
 
 \newpage
@@ -29,7 +32,11 @@
 
 \chapter{Introduction}
 
+Github URL: \url{https://github.com/u12026442/group3b_men_at_work.git}
+\\
+\\
 This document contains the architecture and functional requirements for the Buzz Discussion Board system. It will start with a brief  vision and background to explain the need for such a system from where the architecture and functional requirements will follow.
+
 
 \chapter{Vision}
 
@@ -47,13 +54,6 @@ and the typical usage scenarios for the outputs of the project."}
 \item \textit ...
 \end{itemize}
 
-\chapter{Architecture requirements}
-
-	\section{Access channel requirements}
-	\section{Quality requirements}
-	\section{Integration requirements}
-	\section{Architecture constraints}
-
 \chapter{ Functional requirements and application design}
 	\section{Use case prioritization}
 		\subsection{Critical}
@@ -70,9 +70,11 @@ and the typical usage scenarios for the outputs of the project."}
 \newpage
 \include{replies}
 \newpage
-\include{users}
+\include{user}
 \newpage
 \include{userlists}
+\newpage
+\include{userinterface}
 \newpage
 \include{authenticate}
 \newpage
@@ -83,10 +85,10 @@ and the typical usage scenarios for the outputs of the project."}
 \include{XP}
 \newpage
 
-\subsection{Required functionality}
-\subsection{Process specifications}
-\subsection{Domain Model}
-\subsection{Open Issues}
+\section{Required functionality}
+\section{Process specifications}
+\section{Domain Model}
+\section{Open Issues}
 
 
 
