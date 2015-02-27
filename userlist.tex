@@ -1,0 +1,153 @@
+\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage[textwidth = 195mm]{geometry}
+\usepackage{tabularx}
+
+\begin{document}
+
+\section{Use case: Threads and replies}
+	\subsection{Use case diagram}
+	\subsection{Short description}
+	\begin{description}
+		\item[Depicts the functionality for buzz system through use cases.] 
+	\end{description}
+	\subsection{Use cases}
+
+\newpage
+\begin{table}
+\begin{tabularx}{\textwidth}{|>{\setlength\hsize{0.5\hsize}\setlength\linewidth{\hsize}}X|>{\setlength\hsize{.8\hsize}\setlength\linewidth{\hsize}}X|>{\setlength\hsize{.9\hsize}\setlength\linewidth{\hsize}}X|>{\setlength\hsize{0.8\hsize}\setlength\linewidth{\hsize}}X|}
+\hline
+	\multicolumn{4}{|c|}{\textbf{Use cases for: Threads and Replies}}\\
+\hline
+	\paragraph{Use Case} & \paragraph{Precondition} & \paragraph{Post-condition} & \paragraph{Description} \\
+\hline
+	\paragraph{Create User List}
+&
+\begin{itemize}
+	\item User creating the list is logged in and has permission to create a user list.
+	\item A group exists to accept the user list.
+	
+\end{itemize} &
+\begin{itemize}
+\item	New user list is created.
+\item The user list is assigned to the group.
+
+\end{itemize} &
+	\paragraph{Creates a new user list and assigns it to a group}
+\\
+\hline
+	\paragraph{Update the user list}
+	&
+	\begin{itemize}
+\item	User updateing the list is logged in and has permission to update the user list.
+\item	The user list being updated exists.
+	
+		
+		
+	\end{itemize} &
+	\begin{itemize}
+\item User is added to the user list.
+\item	The user is notified that they have been added.
+
+	\end{itemize} &
+	\paragraph{Adding users to the user list}
+	\\
+	\hline
+	\paragraph{Set user permission}
+	&
+	\begin{itemize}
+		\item User setting the permission is logged in and has permission to set permissions for that user list.
+		\item User having their permissions changed is a member of that user list.
+		
+	\end{itemize} &
+	\begin{itemize}
+		\item	The user whos permissions have been changed is notified of the change.
+		\item The new permission level is saved to the database.
+		\item User has access to the functionallity assigned to that permission level.
+		
+	\end{itemize} &
+	\paragraph{Sets the permission for a user in the user list.}
+	\\
+	\hline
+\end{tabularx}
+\end{table}
+
+\newpage
+\begin{table}
+	\begin{tabularx}{\textwidth}{|>{\setlength\hsize{0.5\hsize}\setlength\linewidth{\hsize}}X|>{\setlength\hsize{.8\hsize}\setlength\linewidth{\hsize}}X|>{\setlength\hsize{.9\hsize}\setlength\linewidth{\hsize}}X|>{\setlength\hsize{0.8\hsize}\setlength\linewidth{\hsize}}X|}
+		\hline
+		\multicolumn{4}{|c|}{\textbf{Use cases for: Threads and Replies}}\\
+		\hline
+		\paragraph{Use Case} & \paragraph{Precondition} & \paragraph{Post-condition} & \paragraph{Description} \\
+		\hline
+		\paragraph{Get user list}
+		&
+		\begin{itemize}
+			\item The user making the request is logged in and has permission to access the user list.
+			\item User User list exists.
+			\item The user is trying to access the user list assigned to the group he is in.
+			
+		\end{itemize} &
+		\begin{itemize}
+			\item	User making the request gets the list of users in the user list.
+			
+		\end{itemize} &
+		\paragraph{Retrieving the list of users in the user list.}
+		\\
+		\hline
+		\paragraph{Add user.}
+		&
+		\begin{itemize}
+			\item	User performing the add is logged in and has permission to update the user list.
+			\item	The user list being updated exists.
+			\item The user being added is a registered user.
+			
+			
+			
+		\end{itemize} &
+		\begin{itemize}
+			\item User being added is included into the user list.
+			\item The user that is added is notified of the addition.
+			\item User now has access to the information with in that group.
+			
+		\end{itemize} &
+		\paragraph{Adding users to the user list}
+		\\
+		\hline
+		\paragraph{Remove user}
+		&
+		\begin{itemize}
+			\item User performing the update is logged in and has permission to update that user list.
+			\item User being removed is a member of that user list.
+			
+		\end{itemize} &
+		\begin{itemize}
+			\item	The user being removed from the list is no longer a member of the user list.
+			\item The user being removed is notified of the change.
+			
+		\end{itemize} &
+		\paragraph{Removing a user from the user list.}
+		\\
+		\hline
+		\paragraph{Remove user list}
+		&
+		\begin{itemize}
+			\item User performing the update is logged in and has permission to update that user list.
+			\item User list being removed exists.
+			
+		\end{itemize} &
+		\begin{itemize}
+			\item	The users being removed from the list is no longer a member of the user list.
+			\item The user being removed is notified of the change.
+			\item the user list is deleted
+			
+		\end{itemize} &
+		\paragraph{Removing the entire user list.}
+		\\
+		\hline
+	\end{tabularx}
+\end{table}
+
+\end{document}
