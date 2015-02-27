@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage[textwidth = 155mm]{geometry}
+
+\begin{document}
+
+\section{Use case: XP}
+	\subsection{Use case diagram}
+\includegraphics[width=\textwidth]{Use_Case_XP.jpg}
+	\subsection{Description}
+	\begin{description}
+		\item[] This is the use case table for XP (User levels). The levels are set by the administrator. User's level may change when their participation meets the criteria for a particular level.  
+	\end{description}
+	\subsection{Use case table}
+
+\newpage
+ \begin{table}
+ 	\begin{tabular}{p{3cm}p{3cm}p{3cm}p{3cm}p{3cm}}
+ 		\hline
+ 		Actor & Use-Case & Description & Pre-condition & Post-condition \\ \hline
+ 		Administrator & Update to rock level & Assign buzz space user lowest level & User must be a registered student & User is assigned rock level and can post threads and reply to threads.\\ \hline
+ 		Administrator & Update to bronze level & Promote user from rock level to bronze level. & User must have posted 20 threads and replied 100 times to multiple threads.  & User moves from rock level to bronze level. User will be able to report inappropriate threads and replies.\\ \hline
+ 		Administrator & Update to silver level & Promote user from bronze level to silver level. & User must have posted 60 threads and replied 200 times to multiple threads. & User moves from bronze level to silver level. User will be able to delete threads or replies that have been reported as inappropriate. \\ \hline
+ 		Administrator & Update to gold level & Promote user from silver level to gold level. & User must have posted 100 threads and replied 350 times to multiple threads. & User moves from silver level to gold level. User will be able to delete threads and replies, whether they have been reported or not. \\ \hline
+ 		Administrator & Update to black diamond level & Promote user from gold level to black diamond level. & User must have posted 120 threads and replied 450 timesto multiple threads. & User moves from gold level to black diamond level. User will be able to delete/archive threads and replies  \\ \hline
+ 		Administrator & Update to platinum level & Promote user from black diamond level to platinum level. & User must have posted 200 threads and replied 600 times to multiple threads. & User moves from black diamond level to platinum level. User will be able to delete/archive threads and replies. User will be able to send warnings to buzz space users if there’s misconduct. \\ \hline  Administrator & Assign titanium level to user & Promote user from platinum level to titanium level. & User must have posted 400 threads and replied 800 times to multiple threads. & User moves from platinum level titanium level. User will be able to delete/archive threads and replies. User will be able to ban buzz space users if there’s misconduct. \\ \hline 
+ 		User &  View level status & Buzz space user will be able to view their progress and outstanding requirements to advance to the next level. & User must be assigned to a level. & User views their buzz space level in status bar form, and outstanding requirements to the next level. \\ \hline
+ 	\end{tabular}
+ \end{table}
+
+
+
+\end{document}
