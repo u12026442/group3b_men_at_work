@@ -1,0 +1,51 @@
+\documentclass{report}
+\usepackage{booktabs}
+\usepackage{longtable}
+\begin{document}
+	
+		\begin{longtable}{@{}|p{1.5cm}|p{2.2cm}|p{3cm}|p{3.5cm}|p{3.5cm}|@{}}
+			\toprule
+			\multicolumn{5}{|c|}{\textbf{Use cases for Report}}\\
+			\hline
+			\textbf{Actor} & \textbf{Use Case} & \textbf{Pre-condition} & \textbf{Post-Conditions} & \textbf{Description} \\ \midrule
+			
+			User Or Admin& 
+			Create Report& 
+			\begin{itemize}
+				\item Buzz must exist
+				\item The actor must be logged in
+				\item The actor has the required amount of XP
+			\end{itemize}& 
+			\begin{itemize}
+				\item Report created
+			\end{itemize} & 
+			Create a report to get a broad view of what happened in Buzz eg users that leveled, popular threads \\ \midrule
+			
+			User Or Admin& 
+			Delete Report& 
+			\begin{itemize}
+				\item Buzz must exist
+				\item The actor must be logged in
+				\item The actor has the required amount of XP
+				\item The report exists that wants to be deleted
+			\end{itemize}& 
+			\begin{itemize}
+				\item Report removed
+			\end{itemize} & 
+			Delete a generated report \\ \midrule
+			
+			User Or Admin& 
+			View Report& 
+			\begin{itemize}
+				\item Actor must be registered
+				\item Actor must be logged into the Buzz System 
+				\item Actor has the required amount of XP
+			\end{itemize}& 
+			\begin{itemize}
+				\item Return report
+			\end{itemize} & 
+			View the report created \\ \bottomrule
+		                 
+		\end{longtable}
+
+\end{document}
