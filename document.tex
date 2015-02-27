@@ -1,11 +1,17 @@
 \documentclass[a4paper, 10pt, oneside]{article}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+\usepackage[textwidth = 200mm,margin = 15mm]{geometry}
+
+\usepackage{tabularx}
+
 
 \title{COS301: Application and Functional Requirements}
 \date{2015-02-19}
 \author{Group 3B}
 
-%include the usecases package
-\usepackage{usecases}
 
 \begin{document}
 
@@ -55,228 +61,8 @@ and the typical usage scenarios for the outputs of the project."}
 	\subsection{Use case/Services contracts}
 
 \newpage
-\begin{usecase}
 
-\addtitle{Use Case 1}{Buzz Discussion Board} 
-
-\addfield{Scope:}{System-wide (Buzz Discussion Board)}
-
-\addfield{Level:}{User-goal}
-
-\addfield{Primary Actor:}{End-User}
-
-\additemizedfield{Stakeholders and Interests:}{
-	\item Lecturer: Want a system to interact with students and where students can help each other with course related and general questions. The system should also keep track of the student's participation 
-	\item Student: Want to use the system to post questions and to help other students with answers.
-	\item Guest: Want to look at the replies on a specific question that is of interest to the guest.
-	\item Administrator: Want to have full CRUD access to administer and maintain the system.
-}
-
-\addfield{Preconditions:}{User is identified and authenticated.}
-
-%\additemizedfield{Preconditions:}{
-%	\item User is authenticated with ldap
-%	\item User is in ldap group where they can have %access to the Buzz system
-%} 
- 
-\additemizedfield{Preconditions:}{
-
-	\item User created group/space/thread/reply
-	\item Group/space/thread/reply saved in database
-	\item XP added to user profile
-	\item Log entry made
-
-}
-
-
-\addscenario{Main Success Scenario:}{
-	\item User login with LDAP credentials
-	\item User transverse to the Group/Space/Thread section
-	\item User add Group/Space/Thread or post a reply on a thread
-	\item Group/space/thread/reply saved in database 
-	\item All necessary users are alerted according to action(s) took by user
-	\item User received XP related to their action in previous steps
-	\item If user qualify for a "level up" or badge, user is alerted and access rights are updated accordingly. 
-}
-
-\addscenario{Extensions:}{
-	\item[1.a] Invalid login data:
-		\begin{enumerate}
-		\item[1.] System shows failure message
-		\item[2.] User returns to step 1
-		\end{enumerate}
-	\item[2.a] Invalid access rights:
-		\begin{enumerate}
-		\item[1.] System shows failure message
-		\item[2.] User returns to step 2 and corrects the errors
-		\end{enumerate}
-	\item[2.a] Invalid create/update rights:
-		\begin{enumerate}
-		\item[1.] System shows failure message
-		\item[2.] User returns to step 3 and corrects the errors
-		\end{enumerate}
-}
-
-\additemizedfield{Special Requirements:}{
-	\item Easy to use
-	\item Users login from LDAP
-	\item Game-like awards/level-up
-	\item Log all actions on system
-	\item Everything must be configurable 
-}
-
-%\addscenario{Technology and Data Variations List:}{
-%	\item[1a.] Alternative first action with other %technology
-%}
-
-%\addfield{Frequency of Occurrence:}{}
-
-%\addfield{Open Issues:}{}
-
-\end{usecase} 
-
-\newpage
-
-\begin{usecase}
-
-\addtitle{Use Case 2}{Buzz Discussion Board} 
-
-\addfield{Scope:}{Login (Buzz Discussion Board)}
-
-\addfield{Level:}{User-goal}
-
-\addfield{Primary Actor:}{End-User}
-
-\additemizedfield{Stakeholders and Interests:}{
-	\item asdf
-}
-
-\addfield{Preconditions:}{User is in LDAP and Authentication succeeds}
-
-\additemizedfield{Preconditions:}{
-	\item User session is created
-	\item User is logged in
-	\item Log entry created
-}
-%	\item User is authenticated with ldap
-%	\item User is in ldap group where they can have %access to the Buzz system
-%} 
- 
-%\additemizedfield{Preconditions:}{
-
-%	\item 
-
-
-%}
-
-
-\addscenario{Main Success Scenario:}{
-	\item asdf
-	
-}
-
-\addscenario{Extensions:}{
-	\item[1.a] Invalid login data:
-		\begin{enumerate}
-		\item[1.] System shows failure message
-		\item[2.] User returns to step 1
-		\end{enumerate}
-	\item[2.a] Invalid access rights:
-		\begin{enumerate}
-		\item[1.] System shows failure message
-		\item[2.] User returns to step 2 and corrects the errors
-		\end{enumerate}
-	\item[2.a] Invalid create/update rights:
-		\begin{enumerate}
-		\item[1.] System shows failure message
-		\item[2.] User returns to step 3 and corrects the errors
-		\end{enumerate}
-}
-
-\additemizedfield{Special Requirements:}{
-	\item asdf
-	
-}
-
-%\addscenario{Technology and Data Variations List:}{
-%	\item[1a.] Alternative first action with other %technology
-%}
-
-%\addfield{Frequency of Occurrence:}{}
-
-%\addfield{Open Issues:}{}
-
-\end{usecase} 
-
-\newpage
-\begin{usecase}
-
-\addtitle{Use Case 2}{Buzz Discussion Board} 
-
-\addfield{Scope:}{Groups (Buzz Discussion Board)}
-
-\addfield{Level:}{User-goal}
-
-\addfield{Primary Actor:}{End-User}
-
-\additemizedfield{Stakeholders and Interests:}{
-	\item asdf
-}
-
-\addfield{Preconditions:}{}
-
-\additemizedfield{Preconditions:}{
-	\item asdf
-}
-%	\item User is authenticated with ldap
-%	\item User is in ldap group where they can have %access to the Buzz system
-%} 
- 
-%\additemizedfield{Preconditions:}{
-
-%	\item 
-
-
-%}
-
-
-\addscenario{Main Success Scenario:}{
-	\item asdf
-	
-}
-
-\addscenario{Extensions:}{
-	\item[1.a] Invalid login data:
-		\begin{enumerate}
-		\item[1.] System shows failure message
-		\item[2.] User returns to step 1
-		\end{enumerate}
-	\item[2.a] Invalid access rights:
-		\begin{enumerate}
-		\item[1.] System shows failure message
-		\item[2.] User returns to step 2 and corrects the errors
-		\end{enumerate}
-	\item[2.a] Invalid create/update rights:
-		\begin{enumerate}
-		\item[1.] System shows failure message
-		\item[2.] User returns to step 3 and corrects the errors
-		\end{enumerate}
-}
-
-\additemizedfield{Special Requirements:}{
-	\item asdf
-	
-}
-
-%\addscenario{Technology and Data Variations List:}{
-%	\item[1a.] Alternative first action with other %technology
-%}
-
-%\addfield{Frequency of Occurrence:}{}
-
-%\addfield{Open Issues:}{}
-
-\end{usecase} 
+\include{groups}
 
 \newpage
 \subsection{Required functionality}
